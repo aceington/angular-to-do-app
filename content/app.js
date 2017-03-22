@@ -31,4 +31,21 @@ myNinjaApp.controller('ninjaController', ['$scope', function($scope){
       available: true
     }
   ]
+
+  $scope.remove = function(ninja) {
+    var removedNinja = $scope.ninjas.indexOf(ninja);
+    $scope.ninjas.splice(removedNinja, 1);
+  }
+  $scope.addNinja = function() {
+    var newNinja = {
+      name: $scope.newNinja.name,
+      belt: $scope.newNinja.belt,
+      rate: $scope.newNinja.rate,
+      available: true
+    }
+    $scope.ninjas.push(newNinja);
+    $scope.newNinja.name = "";
+    $scope.newNinja.belt = "";
+    $scope.newNinja.rate = "";
+  }
 }]);
