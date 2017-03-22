@@ -48,4 +48,4 @@ myNinjaApp.controller('ninjaController', ['$scope', function($scope){
     $scope.newNinja.belt = "";
     $scope.newNinja.rate = "";
   }
-}]);
+}]); 
