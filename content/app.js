@@ -21,11 +21,11 @@ myNinjaApp.controller('ninjaController', ['$scope', function($scope){
       belt: 'red',
       rate: 454.32,
       thumb: 'http://i.telegraph.co.uk/multimedia/archive/03519/potd-sunfish_3519926k.jpg',
-      available: false
+      available: true
     },
     {
       name: 'Eric',
-      belt: 'white',
+      belt: 'purple',
       rate: 423.76,
       thumb: 'http://i.telegraph.co.uk/multimedia/archive/03519/potd-malham-cove-2_3519750k.jpg',
       available: true
