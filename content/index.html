@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app = 'myNinjaApp'>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://code.angularjs.org/1.6.3/angular.min.js"></script>
+    <script src="app.js" charset="utf-8"></script>
+    <title>angular</title>
+</head>
+<body>
+
+  <div ng-controller='ninjaController'>
+    <div class="content">
+      <button ng-click="order = 'name'">Order by name</button>
+      <button ng-click="order = 'belt'">Order by belt</button>
+    <input type='text' ng-model='search'>
+    <ul>
+      <li ng-repeat="ninja in ninjas | orderBy: order | filter:search" ng-show='{{ninja.available}}'>
+        <img ng-src="{{ninja.thumb}}" width="50px">
+        <h3>
+        {{ninja.name}} {{ninja.rate | currency}}
+        </h3>
+      </li>
+    </ul>
+    </div>
+  </div>
+</html>
